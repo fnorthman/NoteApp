@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NorthNot</string>
+
+        <string name="text_size_small">Küçük</string>
+        <string name="text_size_medium">Orta</string>
+        <string name="text_size_large">Büyük</string>
+        <string name="text_size_xlarge">Çok Büyük</string>
+
+
+</resources>

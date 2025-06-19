@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/text_size_small"
+        android:title="Küçük"
+        android:titleCondensed="Küçük" />
+
+    <item
+        android:id="@+id/text_size_medium"
+        android:title="Orta"
+        android:titleCondensed="Orta" />
+
+    <item
+        android:id="@+id/text_size_large"
+        android:title="Büyük"
+        android:titleCondensed="Büyük" />
+
+    <item
+        android:id="@+id/text_size_xlarge"
+        android:title="Çok Büyük"
+        android:titleCondensed="Çok Büyük" />
+
+</menu>

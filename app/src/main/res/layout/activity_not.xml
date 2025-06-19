@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".NotAdd">
+
+    <EditText
+        android:id="@+id/NotSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="24dp"
+        android:hint="Not Başlığı"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAAAAA"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_edittext_bg"
+        android:padding="12dp"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/formatToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/NotSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnTextSize"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/size"
+            android:contentDescription="Yazı Boyutu"
+            android:background="@drawable/rounded_button_bg"
+            app:tint="#FFFFFF"/>
+
+        <ImageButton
+            android:id="@+id/btnBold"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/format_bold_40dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/rounded_button_bg"
+            android:contentDescription="Kalın Yazı"
+            app:tint="#FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/btnItalic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/italic"
+            app:tint="#FFFFFF"
+            android:background="@drawable/rounded_button_bg"
+            android:contentDescription="İtalik Yazı"
+            />
+
+        <ImageButton
+            android:id="@+id/btnUnderline"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/underline"
+            android:background="@drawable/rounded_button_bg"
+            android:contentDescription="Altı Çizili Yazı"
+            app:tint="#FFFFFF"
+            />
+        <ImageButton
+            android:id="@+id/btnBullet"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/list"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/rounded_button_bg"
+            android:contentDescription="Madde"
+            app:tint="#FFFFFF"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/Not"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="24dp"
+        android:hint="Not Yaz..."
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_edittext_bg"
+        android:padding="12dp"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:minLines="10"
+        android:maxLines="30"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/formatToolbar"
+        app:layout_constraintBottom_toTopOf="@+id/priorityLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/priorityLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:layout_marginVertical="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Not">
+
+        <TextView
+            android:id="@+id/priorityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/Not"
+            android:gravity="center_vertical"
+            android:text="Not Önceliği:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLowPriority"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="Düşük"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#4CAF50"
+            app:cornerRadius="30dp"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMediumPriority"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="Orta"
+            android:textColor="#000000"
+            app:backgroundTint="#FFEB3B"
+            app:cornerRadius="30dp"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHighPriority"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="Yüksek"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#FF9800"
+            app:cornerRadius="30dp"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUrgentPriority"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="Acil"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#F44336"
+            app:cornerRadius="30dp"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="İptal"
+            app:backgroundTint="#D32F2F"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="8dp"
+            app:cornerRadius="30dp"
+            android:onClick="cancel"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="add"
+            android:text="Kaydet"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#1E88E5"
+            app:cornerRadius="30dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
